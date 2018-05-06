@@ -30,8 +30,8 @@
         }
 
         hr {
-            margin-top: 0.5em;
-            margin-bottom: 0.5em;
+            margin-top: 0em;
+            margin-bottom: 0em;
             border-width: 5px;
         }
 
@@ -46,13 +46,14 @@
             text-align: center;
             bottom: 0px;
             width: 100%;
+            background-color: grey;
         }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <div class="left"><textarea class="textArea" rows="10" cols="45" id="textInput">roses are $1, violets are $2.</textarea></div>
+        <div class="left"><textarea class="textArea" rows="10" cols="45" id="textInput">roses are #1, violets are #2.</textarea></div>
         <div class="right"><textarea class="textArea" rows="10" cols="45" id="textOutput" readonly></textarea></div>
         <div class="bottom"><button class="button" onclick="transformText()" style="width: 100%;">Replace</button></div>
     </div>
@@ -62,14 +63,16 @@
     <div id="arguments">
         <button class="button" onclick="addField()" style="width: 100%;">Add field</button>
         <div id="element[0]" style="margin: 5px">
-            <span>From: <input type="text" class="fieldFrom" style="width:20%;" id="fieldFrom[0]" value="$1"/></span>
+            <span>From: <input type="text" class="fieldFrom" style="width:20%;" id="fieldFrom[0]" value="#1"/></span>
             <span>To: <input type="text" class="fieldTo" style="width:20%;" id="fieldTo[0]" value="red"/></span>
             <span><button class="button" onclick="removeField(0)">Remove</button></span>
         </div>
     </div>
 
-    <div class="footer">2018.05.06, v1.00</div>
-    <script src="regex.js"></script>
+    <br>
+
+    <div class="footer">2018.05.06, v1.01</div>
+    <script src="regexp.js"></script>
     <script src="fields.js"></script>
 </body>
 

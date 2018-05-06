@@ -8,8 +8,8 @@ function transformText() {
 	textOutput.value = textInput.value;
 
 	for (var i = 0; i < fieldsFrom.length; i++) {
-		var regex = new RegExp(fieldsFrom[i].value.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&"), "g");
-
+		// var regex = new RegExp(fieldsFrom[i].value.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&"), "g");
+		var regex = new RegExp(fieldsFrom[i].value, "g");
 		textOutput.value = textOutput.value.replace(regex, fieldsTo[i].value);
 	}
 }
